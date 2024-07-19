@@ -6,6 +6,12 @@
         <link rel="stylesheet" href="/static/style/mainHbs.css" />
     </head>
     <body>
-        {{{body}}}
+        {{> header/navbar}}
+            <main>
+                <div class="main-container">
+                     {{{body}}}
+                </div>
+            </main>
+        {{> footer/footer}}
     </body>
 </html>
