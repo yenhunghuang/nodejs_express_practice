@@ -25,8 +25,11 @@ router.get("/about", (req, res) => {
 //跟auth有關的移去./auth裡
 router.use("/auth", authenticator, require("./auth"));
 
+// api
+router.use("/api", require("./api"));
+
 //跟article有關的移去./articles裡
-router.use("/articles", authenticator, require("./article"));
+router.use("/articles", require("./article"));
 
 //跟file有關的
 router.use("/file", require("./file"));

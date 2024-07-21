@@ -9,6 +9,9 @@ const fs = require("fs");
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 //logger 放在最前面
 const logger = (req, res, next) => {
     const logEntry = `${new Date().toISOString()} - ${req.method} ${
