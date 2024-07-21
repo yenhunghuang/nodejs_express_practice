@@ -1,13 +1,14 @@
 const { faker } = require("@faker-js/faker");
 const articles = [];
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 5; i++) {
     articles.push({
+        id: i,
         title: faker.lorem.sentence(),
         subtitle: faker.lorem.sentence(),
-        date: faker.date.past().toString(),
+        createDate: faker.date.past().toString(),
         content: faker.lorem.paragraphs(),
-        publish: Math.random() < 0.5,
+        publish: true,
         url: `/articles/${i}`,
     });
 }
